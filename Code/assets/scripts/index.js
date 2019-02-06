@@ -7,11 +7,31 @@ $('document').ready(function () {
             scene = new THREE.Scene();
 
             initMesh();
+            //initBackground();
             initCamera();
             initLights();
             initRenderer();
             controls = new THREE.OrbitControls( camera, renderer.domElement );
             document.body.appendChild(renderer.domElement);
+        }
+
+        function initBackground() {
+
+
+          // ground
+          var groundTexture = new THREE.TextureLoader();
+          var loader = groundTexture.load( 'assets/textures/grasslight-big.jpg' );
+          loader.wrapS = loader.wrapT = THREE.RepeatWrapping;
+          loader.repeat.set( 25, 25 );
+          loader.anisotropy = 16;
+
+          var groundMaterial = new THREE.MeshLambertMaterial( { map: loader } );
+          var mesh = new THREE.Mesh( new THREE.PlaneBufferGeometry( 20000, 20000 ), groundMaterial );
+
+          mesh.position.y = - 250;
+          mesh.rotation.x = - Math.PI / 2;
+          mesh.receiveShadow = true;
+          scene.add( mesh );
         }
 
         function initCamera() {
@@ -22,8 +42,9 @@ $('document').ready(function () {
 
 
         function initRenderer() {
-            renderer = new THREE.WebGLRenderer({ antialias: true });
+            renderer = new THREE.WebGLRenderer({ antialias:true, alpha: true });
             renderer.setSize(WIDTH, HEIGHT);
+            renderer.setClearColor( 0x000000, 0 );
         }
 
         function initLights() {
@@ -44,16 +65,33 @@ $('document').ready(function () {
 
         var mesh = null;
         function initMesh() {
-		loader = new THREE.GLTFLoader();
+            // ground
+            var groundTexture = new THREE.TextureLoader();
+            var loader = groundTexture.load( 'assets/textures/grasslight-big.jpg' );
+            loader.wrapS = loader.wrapT = THREE.RepeatWrapping;
+            loader.repeat.set( 25, 25 );
+            loader.anisotropy = 16;
+
+            var groundMaterial = new THREE.MeshLambertMaterial( { map: loader } );
+            mesh = new THREE.Mesh( new THREE.PlaneBufferGeometry( 20000, 20000 ), groundMaterial );
+
+            mesh.position.y = - 250;
+            mesh.rotation.x = - Math.PI / 2;
+            mesh.receiveShadow = true;
+            scene.add( mesh );
+
+            // ball
+            loader = new THREE.GLTFLoader();
             loader.load( 'assets/models/ball.gltf', function ( gltf ) {
-                mesh = gltf.scene;
-                mesh.traverse( function ( child ) {
-                    if ( child.isMesh ) {
-                        child.geometry.center();//in order to make rotation work
-                    }
-                });
-                scene.add( mesh );
+              mesh = gltf.scene;
+              mesh.traverse( function ( child ) {
+                if ( child.isMesh ) {
+                  child.geometry.center();//in order to make rotation work
+                }
+              });
+              scene.add( mesh );
             });
+
         }
 
         function render() {
