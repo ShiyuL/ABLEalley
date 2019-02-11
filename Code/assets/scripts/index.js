@@ -1,13 +1,14 @@
+var scene;
 $('document').ready(function () {
-        var scene, camera, renderer, controls, loader;
+        var camera, renderer, controls, loader;
         var WIDTH  = window.innerWidth;
         var HEIGHT = window.innerHeight;
 
         function init() {
             scene = new THREE.Scene();
 
+            initBackground();
             initMesh();
-            //initBackground();
             initCamera();
             initLights();
             initRenderer();
@@ -18,26 +19,17 @@ $('document').ready(function () {
         function initBackground() {
 
 
-          // ground
-          var groundTexture = new THREE.TextureLoader();
-          var loader = groundTexture.load( 'assets/textures/grasslight-big.jpg' );
-          loader.wrapS = loader.wrapT = THREE.RepeatWrapping;
-          loader.repeat.set( 25, 25 );
-          loader.anisotropy = 16;
+          var bowlingAlly = createBowlingAlly(1000, 1000, 300);
+          //bowlingAlly.position.set(-475, -10, 0);
+          scene.add(bowlingAlly);
+          loadPinsModel();
 
-          var groundMaterial = new THREE.MeshLambertMaterial( { map: loader } );
-          var mesh = new THREE.Mesh( new THREE.PlaneBufferGeometry( 20000, 20000 ), groundMaterial );
-
-          mesh.position.y = - 250;
-          mesh.rotation.x = - Math.PI / 2;
-          mesh.receiveShadow = true;
-          scene.add( mesh );
         }
 
         function initCamera() {
-            camera = new THREE.PerspectiveCamera(70, WIDTH / HEIGHT, 1, 50);
-            camera.position.set(0,7,-5);
-            camera.lookAt(0,0,5);
+          camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 1, 4000);
+          camera.position.set(-400, 100, 0);
+          camera.lookAt(0, 0, 0);
         }
 
 
@@ -65,20 +57,6 @@ $('document').ready(function () {
 
         var mesh = null;
         function initMesh() {
-            // ground
-            var groundTexture = new THREE.TextureLoader();
-            var loader = groundTexture.load( 'assets/textures/grasslight-big.jpg' );
-            loader.wrapS = loader.wrapT = THREE.RepeatWrapping;
-            loader.repeat.set( 25, 25 );
-            loader.anisotropy = 16;
-
-            var groundMaterial = new THREE.MeshLambertMaterial( { map: loader } );
-            mesh = new THREE.Mesh( new THREE.PlaneBufferGeometry( 20000, 20000 ), groundMaterial );
-
-            mesh.position.y = - 250;
-            mesh.rotation.x = - Math.PI / 2;
-            mesh.receiveShadow = true;
-            scene.add( mesh );
 
             // ball
             loader = new THREE.GLTFLoader();
@@ -89,6 +67,8 @@ $('document').ready(function () {
                   child.geometry.center();//in order to make rotation work
                 }
               });
+              mesh.scale.set(20,20,20);
+              mesh.position.set(-100, 20, 0);
               scene.add( mesh );
             });
 

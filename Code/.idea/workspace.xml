@@ -2,9 +2,41 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ef4c155-4db6-4df9-a896-ecdd4823c52d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scripts/DDSLoader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scripts/MTLLoader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scripts/OBJLoader.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scripts/ThreeCSG.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scripts/physi.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/assets/scripts/pins.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/helvetiker_bold.typeface.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/helvetiker_regular.typeface.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/balls/black/black.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/balls/blue/Blue Bowling Ball.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/balls/green/Green Bowling Ball.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/balls/orange/Orange Bowling Ball.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/balls/pink/Pink Bowling Ball.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/balls/red/Red Bowling Ball.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Bump.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Diffuse.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Pictures/Close up.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Pictures/Front Hit.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Pictures/Front still.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Pin.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Pin.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Reflection.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Saves/High Poly/High Poly.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Saves/High Poly/High_Poly.mtl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Saves/High Poly/High_Poly_Pin.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Saves/Mid Poly/Mid Poly.obj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/models/pins/Saves/Mid Poly/Mid_Poly.mtl" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/._textures" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/._grasslight-big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/._wooden-floor.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/grasslight-big.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/textures/wooden-floor.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,20 +46,29 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scripts/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="55">
-              <caret line="67" selection-start-line="67" selection-end-line="80" selection-end-column="30" />
+            <state relative-caret-position="170">
+              <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/assets/scripts/pins.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="70" column="14" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
-              <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+            <state relative-caret-position="690">
+              <caret line="46" column="4" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -35,8 +76,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="110">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="92" />
+            <state relative-caret-position="243">
+              <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
             </state>
           </provider>
         </entry>
@@ -47,10 +88,23 @@
     <findStrings>
       <find>MEsh</find>
       <find>render</find>
-      <find>scene</find>
       <find>three.sce</find>
       <find>three.js</find>
       <find>webgl</find>
+      <find>fonts/helvetiker_regular.typeface.json</find>
+      <find>font/</find>
+      <find>createla</find>
+      <find>layout</find>
+      <find>lanenum</find>
+      <find>createlane</find>
+      <find>createtv</find>
+      <find>DDSLoader</find>
+      <find>Nicholas Josephson</find>
+      <find>width</find>
+      <find>scene</find>
+      <find>ball</find>
+      <find>height</find>
+      <find>camera</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -59,8 +113,11 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/assets/scripts/index.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/assets/scripts/layout.js" />
+        <option value="$PROJECT_DIR$/assets/scripts/pins.js" />
+        <option value="$PROJECT_DIR$/assets/scripts/index.js" />
       </list>
     </option>
   </component>
@@ -70,10 +127,9 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="319" />
-    <option name="y" value="24" />
+    <option name="y" value="23" />
     <option name="width" value="1280" />
-    <option name="height" value="700" />
+    <option name="height" value="696" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -97,13 +153,12 @@
               <item name="Code" type="b2602c69:ProjectViewProjectNode" />
               <item name="Code" type="462c0819:PsiDirectoryNode" />
               <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Code" type="b2602c69:ProjectViewProjectNode" />
               <item name="Code" type="462c0819:PsiDirectoryNode" />
-              <item name="assets" type="462c0819:PsiDirectoryNode" />
-              <item name="scripts" type="462c0819:PsiDirectoryNode" />
+              <item name="fonts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -117,6 +172,17 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="project.propDebugger" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/assets/scripts" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/assets/scripts" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -153,11 +219,12 @@
       <workItem from="1548105176844" duration="3047000" />
       <workItem from="1548633200137" duration="94000" />
       <workItem from="1548645806736" duration="7021000" />
+      <workItem from="1549832880936" duration="9331000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10162000" />
+    <option name="totallyTimeSpent" value="19493000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -169,10 +236,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="319" y="24" width="1280" height="700" extended-state="0" />
+    <frame x="0" y="23" width="1280" height="696" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25686592" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2609047" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -187,7 +254,7 @@
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="PHP-CGI Server" order="10" />
       <window_info anchor="bottom" id="Terminal" order="11" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" visible="true" weight="0.3305921" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" visible="true" weight="0.33278146" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -203,24 +270,66 @@
         <state relative-caret-position="-9037" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
+    <entry file="file://$PROJECT_DIR$/assets/scripts/physi.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/fonts/helvetiker_bold.typeface.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/ThreeCSG.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/three.min.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/MTLLoader.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="92" />
+        <state relative-caret-position="-619" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/pins/Saves/Mid Poly/Mid Poly.obj">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/OBJLoader.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/DDSLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-140" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/layout.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="157">
+          <caret line="343" column="42" selection-start-line="343" selection-start-column="42" selection-end-line="343" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/assets/scripts/index.js">
+    <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="55">
-          <caret line="67" selection-start-line="67" selection-end-line="80" selection-end-column="30" />
+        <state relative-caret-position="243">
+          <caret line="22" column="8" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="24" column="53" selection-start-line="24" selection-start-column="53" selection-end-line="24" selection-end-column="53" />
+        <state relative-caret-position="690">
+          <caret line="46" column="4" selection-start-line="46" selection-start-column="3" selection-end-line="46" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/pins.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="70" column="14" selection-start-line="70" selection-start-column="8" selection-end-line="70" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/assets/scripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
         </state>
       </provider>
     </entry>
