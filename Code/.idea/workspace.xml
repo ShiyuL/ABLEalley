@@ -2,41 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2ef4c155-4db6-4df9-a896-ecdd4823c52d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/assets/scripts/DDSLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scripts/MTLLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scripts/OBJLoader.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scripts/ThreeCSG.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scripts/physi.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/assets/scripts/pins.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/helvetiker_bold.typeface.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fonts/helvetiker_regular.typeface.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/balls/black/black.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/balls/blue/Blue Bowling Ball.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/balls/green/Green Bowling Ball.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/balls/orange/Orange Bowling Ball.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/balls/pink/Pink Bowling Ball.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/balls/red/Red Bowling Ball.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Bump.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Diffuse.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Pictures/Close up.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Pictures/Front Hit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Pictures/Front still.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Pin.mtl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Pin.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Reflection.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Saves/High Poly/High Poly.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Saves/High Poly/High_Poly.mtl" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Saves/High Poly/High_Poly_Pin.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Saves/Mid Poly/Mid Poly.obj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/models/pins/Saves/Mid Poly/Mid_Poly.mtl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/._textures" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/assets/scripts/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/assets/scripts/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/._grasslight-big.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/._wooden-floor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/grasslight-big.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/textures/wooden-floor.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/._109.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/textures/._109.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/textures/109.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/textures/109.jpg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,8 +18,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/assets/scripts/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+            <state relative-caret-position="240">
+              <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -219,12 +188,12 @@
       <workItem from="1548105176844" duration="3047000" />
       <workItem from="1548633200137" duration="94000" />
       <workItem from="1548645806736" duration="7021000" />
-      <workItem from="1549832880936" duration="9331000" />
+      <workItem from="1549832880936" duration="10400000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19493000" />
+    <option name="totallyTimeSpent" value="20562000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -237,7 +206,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="696" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2609047" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -328,8 +296,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/assets/scripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="69" column="39" lean-forward="true" selection-start-line="69" selection-start-column="39" selection-end-line="69" selection-end-column="39" />
+        <state relative-caret-position="240">
+          <caret line="30" column="33" selection-start-line="30" selection-start-column="33" selection-end-line="30" selection-end-column="33" />
         </state>
       </provider>
     </entry>

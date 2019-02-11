@@ -28,7 +28,7 @@ $('document').ready(function () {
 
         function initCamera() {
           camera = new THREE.PerspectiveCamera(45, WIDTH / HEIGHT, 1, 4000);
-          camera.position.set(-400, 100, 0);
+          camera.position.set(-250, 100, 0);
           camera.lookAt(0, 0, 0);
         }
 
@@ -88,8 +88,8 @@ $('document').ready(function () {
                 case 1: // middle
                     break;
                 case 2: // right click to reset ball position
-                    mesh.position.x = 0;
-                    mesh.position.y = 0;
+                    mesh.position.x = -100;
+                    mesh.position.y = 20;
                     mesh.position.z = 0;
                     break;
             }
@@ -97,19 +97,19 @@ $('document').ready(function () {
         }
 
         function moveWithRotate() {
-            if (mesh.position.z < 10) {
+            if (mesh.position.x < 400) {
                 requestAnimationFrame(moveWithRotate)
                 renderer.render(scene, camera)
-                var direction = new THREE.Vector3( 0, 0, 1 );
+                var direction = new THREE.Vector3( 1, 0, 0 );
 
                 // scalar to simulate speed
-                var speed = 0.1;
+                var speed = 5;
 
                 var vector = direction.multiplyScalar( speed, speed, speed );
                 mesh.position.x += vector.x;
                 mesh.position.y += vector.y;
                 mesh.position.z += vector.z;
-                rotateAboutPoint(mesh, new THREE.Vector3(mesh.position.x, mesh.position.y, mesh.position.z),new THREE.Vector3(1,0,0),0.1, true);
+                rotateAboutPoint(mesh, new THREE.Vector3(mesh.position.x, mesh.position.y, mesh.position.z),new THREE.Vector3(0,0,1),0.1, true);
             }
         }
 
