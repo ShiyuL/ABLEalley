@@ -13,6 +13,8 @@
 
 
         <script src="assets/scripts/physi.js"></script>
+        <script src="assets/scripts/ammo.js"></script>
+        <script src="assets/scripts/physijs_worker.js"></script>
         <script src="assets/scripts/ThreeCSG.js"></script>
         <script src="assets/scripts/layout.js"></script>
         <script src="assets/scripts/pins.js"></script>
