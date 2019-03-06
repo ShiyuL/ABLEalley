@@ -98,8 +98,8 @@ $('document').ready(function () {
 
         function moveWithRotate() {
             if (mesh.position.x < 400) {
-                requestAnimationFrame(moveWithRotate)
-                renderer.render(scene, camera)
+                requestAnimationFrame(moveWithRotate);
+                renderer.render(scene, camera);
                 var direction = new THREE.Vector3( 1, 0, 0 );
 
                 // scalar to simulate speed
@@ -109,7 +109,7 @@ $('document').ready(function () {
                 mesh.position.x += vector.x;
                 mesh.position.y += vector.y;
                 mesh.position.z += vector.z;
-                rotateAboutPoint(mesh, new THREE.Vector3(mesh.position.x, mesh.position.y, mesh.position.z),new THREE.Vector3(0,0,1),0.1, true);
+                rotateAboutPoint(mesh, new THREE.Vector3(mesh.position.x, mesh.position.y, mesh.position.z),new THREE.Vector3(0,0,1),-0.1, true);
             }
         }
 
