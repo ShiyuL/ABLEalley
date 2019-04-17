@@ -33,7 +33,7 @@ function addLanes(parent, width, length, height, laneLength, laneWidth, guardHei
         parent.add(bowlingLane);
     }
 
-    var sideTexture = new THREE.TextureLoader().load('textures/fun.jpg');
+    var sideTexture = new THREE.TextureLoader().load('textures/fun2.jpg');
     sideTexture.wrapT = sideTexture.wrapS = THREE.RepeatWrapping;
     sideTexture.repeat.set(20, 1);
     var sideMaterial = new THREE.MeshPhysicalMaterial({
@@ -80,7 +80,7 @@ function createBowlingLane(width, length, guardHeight, gutterAndRailThickness) {
     collectionBox.position.set(collectionBoxDepth / 2 + length / 2, -25, 0);
     laneFloor.add(collectionBox);
 
-    var middleLight = new THREE.SpotLight(0xffffff, 0.5, collectionBoxHeight * 2, Math.PI, 1);
+    var middleLight = new THREE.SpotLight(0xffffff, 0.5, collectionBoxHeight*2, Math.PI, 1);
     middleLight.position.set(0, collectionBoxHeight / 2, 0);
     middleLight.target = laneFloor;
     //middleLight.castShadow = true;
@@ -90,6 +90,10 @@ function createBowlingLane(width, length, guardHeight, gutterAndRailThickness) {
     middleLight.shadow.camera.far = 300;
     middleLight.shadow.camera.fov = 30;
     laneFloor.add(middleLight);
+
+
+    var backLight = new THREE.PointLight(0xffffff, 5.0,800);
+    //laneFloor.add(backLight);
 
 
     var pinLight = new THREE.SpotLight(0xffffff, 0.5, length, Math.PI / 4, 0.5);
@@ -137,7 +141,7 @@ function createGutter(length, gutterSize, thickness) {
     var gutterRadius = gutterSize / 2;
 
     var gutterMaterial = new THREE.MeshPhysicalMaterial({
-        color: 0x212428,
+        color: 0x76D7C4,
         clearCoat: 1.0
     });
 
