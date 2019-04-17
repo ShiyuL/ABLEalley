@@ -1,13 +1,30 @@
 var scene;
-var speed = 200;
-var angle = 10;
-const SPEEDFACTOR = 2.3;
+var ball;
+var font;
+var clock = new THREE.Clock();
+var speed = 30;
+var angle = 3;
+var score = 0;
+const ANGLEFACTOR = 2.3;
+const SPEEDFACTOR = 8;
+
+//game state
+var rolling = false;
+var waitingToScore = false;
+var reset = false;
+
+var rollTime = 0;
+var scoreTime = 0;
+var delta = 1;
+
+
 $('document').ready(function () {
         var camera, renderer, controls, loader;
         var WIDTH  = window.innerWidth;
         var HEIGHT = window.innerHeight;
 
         function init() {
+            loadFont();
             Physijs.scripts.worker = 'assets/scripts/physijs_worker.js';
             Physijs.scripts.ammo = 'ammo.js';
             scene = new Physijs.Scene;
@@ -61,51 +78,86 @@ $('document').ready(function () {
             scene.add(backLight);
         }
 
-        var mesh = null;
         function initMesh() {
 
             // ball
-            mesh = createBowlingBall();
-            // loader = new THREE.GLTFLoader();
-            // loader.load( 'assets/models/ball.gltf', function ( gltf ) {
-            //   mesh = gltf.scene;
-            //   mesh.traverse( function ( child ) {
-            //     if ( child.isMesh ) {
-            //       child.geometry.center();//in order to make rotation work
-            //     }
-            //   });
-            //   mesh.scale.set(20,20,20);
-            //   mesh.position.set(-100, 20, 0);
-            //   scene.add( mesh );
-            // });
-              //mesh.scale.set(20,20,20);
-            mesh.position.set(-100, 20, 0);
-            scene.add( mesh );
+            ball = createBowlingBall();
+            ball.position.set(-100, 20, 0);
+            scene.add( ball );
 
         }
 
         function render() {
+            delta = clock.getDelta();
             scene.simulate();
             requestAnimationFrame(render);
             controls.update();
+            updateGameState();
             renderer.render(scene, camera);
+        }
+
+        function updateGameState() {
+            if (rolling) {
+                rollTime += delta;
+                if (rollTime > 12) {
+                    rollTime = 0;
+                    rolling = false;
+                    waitingToScore = true;
+                    scoreTime = 0;
+                }
+            } else if (waitingToScore) {
+                points = 0;
+
+                for (var i in scene._objects) {
+                    if (scene._objects[i].name === "pin") {
+                        if (scene._objects[i].position.y < 30 || scene._objects[i].rotation.x > 0.1 || scene._objects[i].rotation.z > 0.1) {
+                            points++;
+                        }
+                    }
+                }
+                console.log("Points: " + points);
+                createScore();
+
+                waitingToScore = false;
+                reset = true;
+            } else if (reset) {
+                resetAll();
+                scoreTime += delta;
+                if (scoreTime > 10) {
+                    scene.remove(laneText);
+                    scoreTime = 0;
+                    reset = false;
+                }
+            }
+        }
+
+        function resetAll() {
+            for (var i in scene._objects) {
+                if (scene._objects[i].name === "ball") {
+                    scene.remove(scene._objects[i]);
+                }
+            }
+            initMesh();
+            resetPins();
+        }
+
+        function loadFont() {
+            var loader = new THREE.FontLoader();
+            loader.load('assets/scripts/helvetiker_bold.typeface.json', function (fontN) {
+                font = fontN;
+            });
         }
 
         function onDocumentMouseDown(event) {
             switch ( event.button ) {
                 case 0: // left click to trigger movement
+                    rolling = true;
                     moveWithRotate();
                     break;
                 case 1: // middle
                     break;
                 case 2: // right click to reset ball position
-                    for (var i in scene._objects) {
-                        if (scene._objects[i].name === "ball") {
-                            scene.remove(scene._objects[i]);
-                        }
-                    }
-                    initMesh();
-                    resetPins();
+                    resetAll();
                     break;
             }
 
@@ -113,7 +165,7 @@ $('document').ready(function () {
 
         function moveWithRotate() {
             //TODO 
-            mesh.setLinearVelocity(new THREE.Vector3(speed, 0, angle * SPEEDFACTOR ));
+            ball.setLinearVelocity(new THREE.Vector3(speed * SPEEDFACTOR, 0, angle * ANGLEFACTOR ));
         }
 
     function createBowlingBall() {
@@ -135,11 +187,38 @@ $('document').ready(function () {
         result = result.subtract(new ThreeBSP(hole3)).toMesh();
 
         var ball = new Physijs.ConvexMesh(result.geometry, ballMaterial, 15);
-        ball.rotation.z = Math.PI / 16;
+        ball.rotation.z = Math.PI / 24;
         ball.name = "ball";
         ball.castShadow = true;
 
         return ball;
+    }
+
+    function createScore() {
+        var xMid;
+        var textShape = new THREE.BufferGeometry();
+        var color = 0xFFFFFF;
+        var matLite = new THREE.MeshBasicMaterial({
+            color: color,
+            transparent: true,
+            opacity: 0.95,
+            side: THREE.DoubleSide
+        });
+        var message = "Score: " + points;
+        var shapes = font.generateShapes(message, 30, 5);
+        var geometry = new THREE.ShapeGeometry(shapes);
+        geometry.computeBoundingBox();
+    
+        xMid = -0.5 * (geometry.boundingBox.max.x - geometry.boundingBox.min.x);
+    
+        textShape.fromGeometry(geometry);
+        laneText = new THREE.Mesh(textShape, matLite);
+        laneText.rotation.y = (-Math.PI / 2);
+
+        laneText.position.set(-30, 30, -120);
+        
+    
+        scene.add(laneText);
     }
 
 
