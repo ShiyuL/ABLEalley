@@ -1,4 +1,7 @@
 var scene;
+var speed = 200;
+var angle = 10;
+const SPEEDFACTOR = 2.3;
 $('document').ready(function () {
         var camera, renderer, controls, loader;
         var WIDTH  = window.innerWidth;
@@ -109,41 +112,9 @@ $('document').ready(function () {
         }
 
         function moveWithRotate() {
-            mesh.setLinearVelocity(new THREE.Vector3(200, 0, 0 ));
-            // if (mesh.position.x < 700) {
-            //     requestAnimationFrame(moveWithRotate);
-            //     renderer.render(scene, camera);
-            //
-            //     var direction = new THREE.Vector3( 1, 0, 0 );
-            //
-            //     // scalar to simulate speed
-            //     var speed = 5;
-            //
-            //     var vector = direction.multiplyScalar( speed, speed, speed );
-            //     mesh.position.x += vector.x;
-            //     mesh.position.y += vector.y;
-            //     mesh.position.z += vector.z;
-            //     rotateAboutPoint(mesh, new THREE.Vector3(mesh.position.x, mesh.position.y, mesh.position.z),new THREE.Vector3(0,0,1),-0.1, true);
-            // }
+            //TODO 
+            mesh.setLinearVelocity(new THREE.Vector3(speed, 0, angle * SPEEDFACTOR ));
         }
-
-    function rotateAboutPoint(obj, point, axis, theta, pointIsWorld){
-        pointIsWorld = (pointIsWorld === undefined)? false : pointIsWorld;
-
-        if(pointIsWorld){
-            obj.parent.localToWorld(obj.position); // compensate for world coordinate
-        }
-
-        obj.position.sub(point); // remove the offset
-        obj.position.applyAxisAngle(axis, theta); // rotate the POSITION
-        obj.position.add(point); // re-add the offset
-
-        if(pointIsWorld){
-            obj.parent.worldToLocal(obj.position); // undo world coordinates compensation
-        }
-
-        obj.rotateOnAxis(axis, theta); // rotate the OBJECT
-    }
 
     function createBowlingBall() {
         var ballMaterial = new THREE.MeshPhongMaterial({color: 0xff3333});
