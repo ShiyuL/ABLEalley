@@ -23,6 +23,13 @@
         <script src="assets/scripts/OBJLoader.js"></script>
         <script src="assets/dependencies/OrbitControls.js"></script>
 		    <script src="assets/scripts/index.js"></script>
+
+        <div hidden>
+          <video autoplay muted="muted" loop id = "video" width="320" height="240" controls>
+            <source src="textures/space.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
 	</head>
 	<body>
 

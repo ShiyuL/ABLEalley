@@ -243,7 +243,12 @@ function createEnclosing(width, length, height) {
     top.position.y = height;
     base.add(top);
 
-    var wallTexture = new THREE.TextureLoader().load("textures/wall10.jpg");
+    video = document.getElementById( 'video' );
+    video.play();
+
+    wallTexture = new THREE.VideoTexture( video );
+
+   // var wallTexture = new THREE.TextureLoader().load("textures/wp2863950.gif");
     var sideWallMaterial = new THREE.MeshLambertMaterial({map: wallTexture});
 
     var leftWall = new Physijs.BoxMesh(new THREE.BoxGeometry(length, height, 1), sideWallMaterial);
